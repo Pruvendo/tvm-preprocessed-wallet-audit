@@ -44,7 +44,7 @@ The valuable stack elements are:
     - _FALSE_ - for internal messages
     - _TRUE_ - for external messages
 - _msg_ - slice that represents message body according
-to Chapter _A.11.9_ of the TVM documentation mentioned
+to the  Chapter _A.11.9_ of the TVM documentation mentioned
 above as well as in section 3.1.7 of [Blockchain documentation](https://ton.org/tblkch.pdf)
 
 The message body has the following parameters:
@@ -105,8 +105,9 @@ Persistent data is a cell that contains two bit sequences with no references:
 
 ## Workflow analysis
 
-The detailed workflow analysis provided above demonstrated that works correctly and provides
-the comprehensive for all the input parameteres, including the security ones.
+The detailed workflow analysis provided above demonstrates that the contract works correctly and provides
+the comprehensive checks for all the input 
+parameteres, including the security ones.
 
 ## Attack analysis
 
@@ -144,7 +145,7 @@ _PUSHPOW2_ . All the doubtful cases (such as using
 _PUSHPOW2_ together with _MOD_ instead of _PUSH_  and
 _AND_ ) were analyzed and the auditors came to
 conclusion that developers chose the optimal approach
-in all the considered cases.
+in all the cases were considered.
 
 # Issues found
 
