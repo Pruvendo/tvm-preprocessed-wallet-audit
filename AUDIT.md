@@ -1,6 +1,7 @@
-# TVM-preprocessed-Wallet audit report
+<img src="new_logo.png" width=150px/>
 
-![Pruvendo logo](new_logo.jpg)
+
+# TVM-preprocessed-Wallet audit report
 
 The present audit report has been prepared by [Pruvendo](https:://pruvendo.com) at 05/11/23
 
