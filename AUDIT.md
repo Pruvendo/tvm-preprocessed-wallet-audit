@@ -6,7 +6,9 @@ The present audit report has been prepared by [Pruvendo](https:://pruvendo.com) 
 
 # Introduction
 
-The present audit is conducted against [tvm-preprocessed-wallet](https://github.com/ever-incubator/tvm-preprocessed-wallet/blob/main/code.fif) contract with the has code equal to ```aebadc7ba6ff8fc7f99c98b22ec2197fd7e94038```.
+The present audit is conducted against 
+[tvm-preprocessed-wallet](https://github.com/ever-incubator/tvm-preprocessed-wallet/blob/main/code.fif) contract with the code equals to the 
+commit ```aebadc7ba6ff8fc7f99c98b22ec2197fd7e94038```.
 
 The contract represents a simple TVM-based (applicable
 for such blockchains as [TON](https://ton.org/) or [Everscale](https://everscale.network/)) wallet,
