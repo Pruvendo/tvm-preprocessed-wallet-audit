@@ -131,7 +131,7 @@ and the message number provided.
 Such a defence:
 - prevents a replay attack
 - elimitates the risk of counter overflow by using modulo wrapped increment 
-(with modulo equal to 2<sup>16</sub>)
+(with modulo equal to 2<sup>16</sup>)
 - at the same time the modulo is big enough to avoid the risk of having two
 non-expired messages with the same number
 
