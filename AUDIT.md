@@ -61,7 +61,7 @@ The message body has the following parameters:
 
 Persistent data is a cell that contains two bit sequences with no references:
 - _key_ - 256-bit sequence representing the private key of the contract owner
-- _cur_ - the current value sequence number that is expected in the next message
+- _cur_ - the current value sequence number (16 bit) that is expected in the next message
 
 | Instruction | Comments | S0 | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
