@@ -61,7 +61,7 @@ The message body has the following parameters:
 
 Persistent data is a cell that contains two bit sequences with no references:
 - _key_ - 256-bit sequence representing the private key of the contract owner
-- _cur_ - the current value of the minimally accepted sequence number
+- _cur_ - the current value sequence number that is expected in the next message
 
 | Instruction | Comments | S0 | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
@@ -125,16 +125,16 @@ eliminating this risk.
 ### Replay attack
 
 The contract provides a defence against replay protection that is based on exact
-equivalence of the expected message number and the message number provided.
+equivalence of the expected message counter (incremented at each message)
+and the message number provided.
 
 Such a defence:
 - prevents a replay attack
-- prevents an attack based on counter increase (internal messages are blocked at the
-beginning of the contract code while _ACCEPT_ is called after all the checks that eliminates the risk
-of writing malicious data into the blockhain)
+- elimitates the risk of counter overflow by using modulo wrapped increment 
+(with modulo equal to 2<sup>16</sub>)
+- at the same time the modulo is big enough to avoid the risk of having two
+non-expired messages with the same number
 
-However, there is a risk the onwer loses the counter
-and, thus, the assets become frozen.
 
 ## Performance and gas spending analysis
 
@@ -150,16 +150,7 @@ in all the cases were considered.
 
 # Issues found
 
-The only issue that has been found is as follows:
-if the owner somehow loses the message counter
-(say, due to the poor Internet connection and
-subsequent failure of transaction), he loses access
-to its funds.
-
-The auditors hope that it's supposed all the
-transactions to be held via debots (out of the audit scope) and the latter eliminate this risk, so
-the issue being discussed is prioritized as _MINOR_
-and does not change the **positive** verdict.
+No issues found throughout the present audit.
 
 # Audit outcome
 
