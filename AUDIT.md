@@ -54,14 +54,14 @@ The message body has the following parameters:
 - ref:
     - _data_ - cell representing the rest of the message
         - data:
-            - _until_ - 64-bits representing time until the message is valid
-            - _num_ - 16-bits representing the message sequence number
+            - _until_ - 64-bit value representing time until the message is valid
+            - _num_ - 16-bit value representing the message sequence number
         - ref:
             - _actions_ - the cell representing the code to be executed
 
 Persistent data is a cell that contains two bit sequences with no references:
 - _key_ - 256-bit sequence representing the private key of the contract owner
-- _cur_ - the current value sequence number (16 bit) that is expected in the next message
+- _cur_ - the current value sequence number (16 bits) that is expected in the next message
 
 | Instruction | Comments | S0 | S1 | S2 | S3 | S4 | S5 | S6 | S7 | S8 | S9 |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
