@@ -116,6 +116,7 @@ The most common attacks for the wallet contracts are:
 
 - Violation of security
 - Replay attack
+- Exception after _ACCEPT_
 
 ### Violation of security
 
@@ -131,9 +132,20 @@ and the message number provided.
 Such a defence:
 - prevents a replay attack
 - elimitates the risk of counter overflow by using modulo wrapped increment 
-(with modulo equal to 2<sup>16</sup>)
+(with modulo equals to 2<sup>16</sup>)
 - at the same time the modulo is big enough to avoid the risk of having two
 non-expired messages with the same number
+
+### Exception after _ACCEPT_
+
+Exceptions after _ACCEPT_ may lead to uncontrolled
+gas spending from the contract balance due to the
+repeatable calls of public methods by the attacker.
+
+In the present contract the developer filtered out
+all the potentially malicious calles before invoking
+the _ACCEPT_ primitive thus eliminating the
+possibility of the attack being discussed.
 
 
 ## Performance and gas spending analysis
