@@ -1,15 +1,27 @@
 <img src="new_logo.png" width=150px/>
 
 
-# TVM-preprocessed-Wallet audit report
+# TON-preprocessed-Wallet-v2 audit report
 
 The present audit report has been prepared by [Pruvendo](https:://pruvendo.com) at 05/11/23
 
 # Introduction
 
 The present audit is conducted against 
-[tvm-preprocessed-wallet](https://github.com/ever-incubator/tvm-preprocessed-wallet/blob/main/code.fif) contract with the code equals to the 
-commit ```aebadc7ba6ff8fc7f99c98b22ec2197fd7e94038```.
+[ton-preprocessed-wallet-v2](https://github.com/pyAndr3w/ton-preprocessed-wallet-v2) contract with the commit equal to
+```aebadc7ba6ff8fc7f99c98b22ec2197fd7e94038``` and
+SHA256 hash code of _code.fif_ file being audited
+equal to 
+```44f23075c69f0c98cbd50ac9ddfdf12e1da67fb894db1f35dbad6349bb753cf1```.
+
+
+> To calculate SHA256 hash under Linux use 
+_sha256sum_ tool (built-in for the most Linux
+distributions) in the following way:
+```sha256sum <filename>```. For other operating
+system there are similar tools than can be easily 
+found.
+
 
 The contract represents a simple TVM-based (applicable
 for such blockchains as [TON](https://ton.org/) or [Everscale](https://everscale.network/)) wallet,
